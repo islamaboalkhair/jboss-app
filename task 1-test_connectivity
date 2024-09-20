@@ -1,0 +1,14 @@
+test connectivity between two servers 
+we have server a  and server b  and need to test connectivity port 80  is it  open or  not 
+
+1. Using telnet (if installed)
+telnet <server_b_ip> 80
+
+2. Using nc (Netcat)
+nc -zv <server_b_ip> 80
+
+3. Using nmap (Port scanning)
+nmap -p 80 <server_b_ip>
+
+4-Create a Dummy HTTP Service pythion 
+sudo python3 -m http.server 80
